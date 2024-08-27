@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  text-align: center;
+
+}
+
+#openModalBtn {
+  margin-top: 50px;
+  padding: 15px 25px;
+  border: none;
+  background-color: orange;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 10px 10px 8px grey;
+
+}
+
+#openModalBtn:hover {
+
+  background-color: rgb(60, 255, 0);
+
+}
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 600px;
+  height: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 32px;
+  font-weight: bold;
+
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 5px 10px;
+  height: 40px;
+  background-color: #626362;
+  color: white;
+  text-align: center;
+
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: row;
+  padding: 2px 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 15px;
+
+
+}
+
+.modal-product {
+  display: flex;
+  flex-direction: column;
+  width: 190px;
+  height: 330px;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #acafac;
+  box-shadow: 5px 6px 10px rgba(128, 128, 128, 0.923);
+
+}
+
+.modal-product-img {
+  position: relative;
+}
+
+.badges-container {
+  position: absolute;
+  bottom: -6px;
+  right: -10px;
+  display: flex;
+  flex-direction: column;
+  /* Zarovnání odspodu nahoru */
+  align-items: flex-end;
+  gap: 5px;
+  /* Mezera mezi badge */
+}
+
+.badge {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  width: 70px;
+  font-size: 12px;
+  border-radius: 10px;
+
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.modal-product-heading h2 {
+  margin-top: 10px;
+
+}
+
+.modal-product-heading p {
+  margin-top: 5px;
+
+}
+
+.modal-product-img img {
+  width: 150px;
+  height: 150px;
+  padding: 10px 10px;
+
+}
+
+.modal-product-button input[type="button"] {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 8px 20px;
+  color: white;
+  background-color: orange;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.modal-footer {
+  /* padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white; */
+}
+
+/*Modal 2 zmeny */
+.modal-product-2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+
+
+}
+
+.modal-product-countdown {
+
+  font-size: 23px;
+  font-weight: bold;
+  margin-top: 30px;
+
+}
+
+.modal-product-coupon p {
+
+  border: 3px dashed black;
+  width: 250px;
+  padding: 15px 20px;
+  background-color: #c9c9c9;
+  margin-top: 20px;
+
+}
+
+.modal-product-coupon input[type="button"] {
+
+  border: none;
+  background-color: transparent;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 10px;
+
+}
+
+.modal-product-how-to-use {
+  width: 100%;
+  text-align: left;
+  margin-top: 35px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .modal-body {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .modal-header{
+    height: 50px;
+
+  }
+ .modal-header h2{
+    font-size: 18px;
+
+  }
+
+  .modal-content {
+    width: 250px;
+    height: 850px;
+}
+
+
+
+  .modal {
+    padding-top: 0px;
+  }
+
+  .modal-body {
+    display: flex;
+    flex-direction: row;
+    /* padding: 2px 16px; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* gap: 15px; */
+}
+.modal-product-how-to-use {
+  
+    text-align: center;
+ 
+}
+
+}
